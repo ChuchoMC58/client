@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,6 +63,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": true,
+            "sslCert": "ssl/localhost.pem",
+            "sslKey": "ssl/localhost-key.pem"           
+          },
           "configurations": {
             "production": {
               "buildTarget": "client:build:production"
@@ -91,6 +97,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -98,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b7c6b6a3-71ab-45f8-aa57-6fae6a9eac17"
   }
 }
